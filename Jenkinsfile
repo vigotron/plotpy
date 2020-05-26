@@ -5,8 +5,8 @@ pipeline
 	  stages {
 		    stage('Docker build') {
 				      steps {
-											bash build.sh							        
-														  }
-									  }
+					      bash build.sh							        
+					    }
+			          	  }
 		  		 }
 } 
