@@ -6,11 +6,9 @@ pipeline
 	  stages {
 		    stage('Docker build') {
 				      steps {
+					      echo "${BASH_VERSION}" 
 					      bash build.sh
-					      docker run -d \
-          				      -it \
-					      --mount type=bind,source="$(pwd)",target=/app \
-					      plotpy:master	
+					      
 					      
 					    }
 			          	  }
