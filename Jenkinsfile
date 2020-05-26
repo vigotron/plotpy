@@ -6,9 +6,10 @@ pipeline
 	  stages {
 		    stage('Docker build') {
 				      steps {
-					      echo "${BASH_VERSION}" 
-					      bash build.sh
-					      
+					      script {
+					      		sh 'echo "${BASH_VERSION}"'
+						        sh 'bash build.sh'
+					             } 
 					      
 					    }
 			          	  }
