@@ -4,7 +4,8 @@ pipeline
   agent { dockerfile true }
 	  stages {
 		    stage('Docker build') {
-				      steps {
+				      steps {	
+					      sh 'bash build.sh'
 					      sh 'whoami'
 					      sh 'ls'
 					      sh 'pwd'
