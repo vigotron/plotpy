@@ -1,8 +1,7 @@
 import groovy.json.JsonOutput
 pipeline
 {
-  agent { docker dockerfile true
-	}
+  agent { dockerfile true }
 	  stages {
 		    stage('Docker build') {
 				      steps {
