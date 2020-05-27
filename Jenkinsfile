@@ -1,7 +1,7 @@
 import groovy.json.JsonOutput
 pipeline
 {
-  agent { docker 'plotpy:master' 
+  agent { docker dockerfile true
 	}
 	  stages {
 		    stage('Docker build') {
