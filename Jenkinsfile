@@ -6,6 +6,9 @@ pipeline
 	  stages {
 		    stage('Docker build') {
 				      steps {
+					      whoami
+					      ls
+					      pwd
 					      echo "${BASH_VERSION}" 
 					      bash build.sh
 					      
