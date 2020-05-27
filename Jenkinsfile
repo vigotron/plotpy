@@ -9,7 +9,7 @@ pipeline
 					      sh 'ls'
 					      sh 'pwd'
 					      echo "${BASH_VERSION}" 
-					      bash build.sh
+					      sh 'build.sh'
 					      
 					      
 					    }
