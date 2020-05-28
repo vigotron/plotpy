@@ -1,18 +1,17 @@
 node
 {
-	 stage('Checkout repo')
+	 stage('Checkout Plotpy repository')
 	 					{
 							checkout scm
 						}
-	 stage('Build docker')
+	 stage('Build and run Docker image')
 	 					{
 							sh 'whoami'
-							sh 'ls'
 							sh 'pwd'
 							sh 'bash build.sh'
 						}
-	 stage('Docker run script')
+	 stage('Check proper output file exists')
 						{
-							sh 'echo Test test testttttttttt'			
+							sh 'ls'
 						}
 } 
