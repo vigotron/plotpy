@@ -4,7 +4,10 @@ pipeline
   agent { dockerfile true }
 	  stages {
 		    stage('Docker build and run') {
-				      steps {sh	'bash build.sh'	  }
+				      steps {sh	'docker run -d \
+  						 -it \
+  						--mount type=bind,source="$(pwd)"/,target=/app \
+  						plotpy:master'	  }
 						  }
 		 }
 } 
