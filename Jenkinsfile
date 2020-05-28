@@ -23,6 +23,4 @@ node
 					from: "jenkins@no-reply.com"
 		              }
 			}
-	}
-
-} 
+}
