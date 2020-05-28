@@ -1,7 +1,7 @@
 import pandas as pd
 import  matplotlib.pyplot as plt
 
-covid = pd.read_csv('https://query.data.world/s/o3bkgrhozxhmq3uika2msjse33u3vq')
+covid = pd.read_csv('https://query.data.world/s/7ioph3uozd2u56qgyddspfo5i7immt')
 plt.title("Deaths count in Germany,Spain,Sweden,UK and US")
 plt.ylabel("Deaths")
 plt.xlabel("Time")
