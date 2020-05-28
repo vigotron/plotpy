@@ -14,7 +14,7 @@ node
 						{
 							sh 'ls'
 						}
-	 post { always { exho 'Email notification'
+	 post { always { echo 'Email notification'
 	 
 					emailext attachmentsPattern: 'test.png',
   				subject: "Successful Job: '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
