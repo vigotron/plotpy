@@ -17,11 +17,11 @@ node
 
 	def notifySuccessful() { 
 		
-	emailext (
+	emailext attachmentsPattern: 'test.png',(
 		 subject: "Successful Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
 	   body: "Checkout latest '${env.JOB_NAME}'",
 		 to: "sempai88@gmail.com",
-		 from: jenkins@no-reply.com
+		 from: "jenkins@no-reply.com"
 		 		    )
 	}
 
