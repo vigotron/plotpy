@@ -14,7 +14,10 @@ node
 						{
 							sh 'ls'
 						}
-	 post { always { echo 'Email notification'
+   post { always {
+	 archiveArtifacts artifacts: 'test.png', onlyIfSuccessful: true
+	 
+	 echo 'Email notification'
 	 
 					emailext attachmentsPattern: 'test.png',
   				subject: "Successful Job: '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
