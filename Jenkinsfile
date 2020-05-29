@@ -13,5 +13,6 @@ node
 	 stage('Check proper output file exists')
 						{
 							sh 'ls -la'
+							sh 'ls output -la'
 						}
 }
