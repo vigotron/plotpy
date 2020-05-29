@@ -25,5 +25,5 @@ plt.plot(uk.date, uk.totalDeaths)
 plt.plot(us.date, us.totalDeaths)
 plt.legend(['Germany', 'Spain', 'Sweden', 'UK', 'US'])
 
-plt.savefig('test.png')
+plt.savefig('output/test.png')
 print('image build test')
