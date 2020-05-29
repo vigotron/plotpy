@@ -12,18 +12,6 @@ node
 						}
 	 stage('Check proper output file exists')
 						{
-							sh 'ls'
+							sh 'ls -la'
 						}
-   post { always {
-	 archiveArtifacts artifacts: 'test.png', onlyIfSuccessful: true
-	 
-	 echo 'Email notification'
-	 
-					emailext attachmentsPattern: 'test.png',
-  				subject: "Successful Job: '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
-					body: "Checkout latest '${env.JOB_NAME}'",
-					to: "sempai88@gmail.com",
-					from: "jenkins@no-reply.com"
-		              }
-			}
 }
